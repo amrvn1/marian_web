@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marian School Portal</title>
+  <link rel="stylesheet" href="frontend.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Marian School Portal</h1>
+
+    <!-- Account Icon at top right -->
+    <div id="accountIcon" title="Account" class="account-icon" tabindex="0">
+      <span id="accountInitials">👤</span>
+    </div>
+
+    <!-- Dropdown menu for logged-in user -->
+    <div id="accountMenu" class="account-menu" style="display:none;">
+      <p id="accountUserName" class="menu-item"></p>
+      <button id="logoutButton" class="logout-button menu-item">Logout</button>
+    </div>
+
+    <!-- Welcome message -->
+    <div id="welcomeMessage" style="display:none;"></div>
+
+    <!-- Login Form -->
+    <form class="login-form" id="loginForm">
+      <label for="student-id">Student ID</label>
+      <input type="text" id="student-id" placeholder="Enter your ID" required />
+
+      <label for="password">Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Enter password" required />
+        <span id="togglePassword" class="eye">👁️</span>
+      </div>
+
+      <button type="submit">Login</button>
+      
+      <!-- Forgot Password link -->
+      <p id="forgotPassword" class="link-text" style="margin-top: 10px;">
+        Forgot Password?
+      </p>
+
+      <p id="showSignup" class="link-text">New user? Sign up</p>
+    </form>
+
+    <!-- Signup Form -->
+    <form id="signupForm" style="display:none;" class="login-form">
+      <label for="new-student-id">Create Student ID</label>
+      <input type="text" id="new-student-id" placeholder="Choose an ID" required />
+
+      <label for="full-name">Full Name</label>
+      <input type="text" id="full-name" placeholder="Enter your full name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="new-password">Create Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="new-password" placeholder="Choose a password" required />
+        <span id="toggleNewPassword" class="eye">👁️</span>
+      </div>
+
+      <button type="submit">Sign Up</button>
+      <p id="showLogin" class="link-text">Already have an account? Login</p>
+    </form>
+
+    <!-- Links -->
+    <div class="links" id="linksContainer" style="display:none;">
+      <a href="apply.html">📄 Apply for Admission</a>
+      <a href="calendar.html">📅 Academic Calendar</a>
+      <a href="results.html">📊 View Results</a>
+      <a href="teachers.html">👨‍🏫 Meet Teachers</a>
+    </div>
+
+    <!-- Logout (legacy container, can remain hidden now) -->
+    <div id="logoutContainer" style="display:none; margin-top: 20px; text-align: center;">
+      <button id="logoutButtonLegacy" class="logout-button">Logout</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>Marian School © <span id="year"></span></footer>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
