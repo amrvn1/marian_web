@@ -58,7 +58,6 @@
         <h3>📍 COME VISIT US</h3>
         <p>KEREGE</p>
         <p>Bagamoyo, Pwani</p>
-        
       </div>
   
       <div class="footer-box">
@@ -80,17 +79,16 @@
         <button class="subscribe-btn">Subscribe</button>
       </div>
     </div>
-  </footer>
-  
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Marian School. All rights reserved. | Powered by Marian Tech Team
+    <div class="copyright">
+      &copy; 2025 Marian School. All rights reserved. | Powered by Marian Tech Team
+    </div>
   </footer>
 
   <script>
+    const FRONTEND_URL = 'https://amrvn1.github.io/marian_web/';
     function goToLogin() {
-      window.location.href = "frontend.html"; 
+      const url = FRONTEND_URL || 'http://localhost:3000/';
+      window.location.href = url;
     }
   </script>
 </body>
