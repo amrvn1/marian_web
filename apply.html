@@ -3,11 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apply for Admission</title>
+  <title>Apply for Admission — Marian Schools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <h1>📄 Apply for Admission</h1>
-  <p>Welcome to the Admission page. Here you can apply for admission.</p>
-  <a href="#" onclick="history.back(); return false;">🔙 Back</a>
+
+  <nav class="site-nav">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="20" fill="#12283A"/>
+        <path d="M20 8 L20 24 L10 24 Z" fill="#E0A526"/>
+        <path d="M8 26 Q20 30 32 26 L29 30 Q20 33 11 30 Z" fill="#F7F1E3"/>
+        <line x1="20" y1="8" x2="20" y2="26" stroke="#F7F1E3" stroke-width="1.2"/>
+      </svg>
+      Marian Schools
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teachers.html">Teachers</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="apply.html" aria-current="page">Admissions</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="account-icon" onclick="window.location.href='frontend.html'" title="Student &amp; Parent Portal" aria-label="Go to login">👤</button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <a class="breadcrumb" href="index.html">← Back to home</a>
+      <p class="eyebrow on-dark">Admissions</p>
+      <h1>📄 Apply for admission</h1>
+      <p>Four steps from interest to enrolment. Applications for the next intake at Marian Schools, Kerege, are reviewed on a rolling basis.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">How it works</p>
+        <h2>The application process</h2>
+      </div>
+      <div class="step-list">
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>Submit your details</h3>
+            <p>Sign in to the student &amp; parent portal and complete the applicant form with the student's name, date of birth and current school.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>Upload documents</h3>
+            <p>Attach the most recent report card, a birth certificate, and one passport photo. Files are reviewed by the admissions office within five working days.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>Book an interview</h3>
+            <p>Once documents are reviewed, choose a slot on the <a href="calendar.html">academic calendar</a> for a short interview with the applicant and a parent or guardian.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>Confirmation &amp; enrolment</h3>
+            <p>Successful applicants receive a confirmation letter and a place in the coming term, along with a checklist for uniforms and orientation day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="notice">
+        <div class="icon">ℹ️</div>
+        <div>
+          <h4>Sign in to start an application</h4>
+          <p>The full application form lives inside the student &amp; parent portal, so your progress is saved between visits.</p>
+        </div>
+      </div>
+      <div style="margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;">
+        <a class="btn btn-primary" href="frontend.html">Sign in to apply</a>
+        <a class="btn btn-ghost" href="calendar.html">View interview dates</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="brand-col">
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="20" cy="20" r="20" fill="#F7F1E3"/>
+            <path d="M20 8 L20 24 L10 24 Z" fill="#E0A526"/>
+            <path d="M8 26 Q20 30 32 26 L29 30 Q20 33 11 30 Z" fill="#12283A"/>
+          </svg>
+          Marian Schools
+        </div>
+        <p>Kerege, Bagamoyo, Pwani — academic excellence and transparent communication with students and parents.</p>
+      </div>
+      <div>
+        <h4>Call us</h4>
+        <p>Office: +255 766 000 000</p>
+        <p>Hotline: +255 766 000 000</p>
+      </div>
+      <div>
+        <h4>Visit us</h4>
+        <p>Kerege<br>Bagamoyo, Pwani</p>
+        <p>Mon–Fri 8:00–17:00<br>Sat 9:00–12:00</p>
+      </div>
+      <div>
+        <h4>Admissions</h4>
+        <div class="links">
+          <a href="apply.html">Apply for admission</a>
+          <a href="calendar.html">Academic calendar</a>
+          <a href="results.html">Results portal</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2025 Marian Schools. All rights reserved. · Built by the Marian Tech Team</div>
+  </footer>
+
 </body>
 </html>

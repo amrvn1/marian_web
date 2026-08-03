@@ -4,93 +4,142 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Marian School Public Page</title>
-  <link rel="stylesheet" href="public.css" />
+  <meta name="description" content="Marian Schools in Kerege, Bagamoyo — academic calendar, admissions, results and a portal for students and parents." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
 
-  <!-- Account Icon -->
-  <div class="account-icon" onclick="goToLogin()">
-    <img src="user-icon.png" alt="Account Icon" />
-  </div>
-
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <h2>Marian SchoolS</h2>
+  <nav class="site-nav">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="20" fill="#12283A"/>
+        <path d="M20 8 L20 24 L10 24 Z" fill="#E0A526"/>
+        <path d="M8 26 Q20 30 32 26 L29 30 Q20 33 11 30 Z" fill="#F7F1E3"/>
+        <line x1="20" y1="8" x2="20" y2="26" stroke="#F7F1E3" stroke-width="1.2"/>
+      </svg>
+      Marian Schools
+    </a>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">News</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="teachers.html">Teachers</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="apply.html">Admissions</a></li>
     </ul>
+    <div class="nav-actions">
+      <button class="account-icon" onclick="goToLogin()" title="Student &amp; Parent Portal" aria-label="Go to login">👤</button>
+    </div>
   </nav>
 
-  <!-- Welcome Section -->
-  <section class="welcome-section">
-    <h1>Welcome to Marian School Portal</h1>
-    <p>Your gateway to academic excellence and transparent communication with our students and parents.</p>
-  </section>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow on-dark">Kerege · Bagamoyo · Pwani</p>
+        <h1>School on the <em>Swahili&nbsp;coast</em>, built for the whole family.</h1>
+        <p class="lede">Marian Schools connects students, parents and teachers in one place — admissions, the academic calendar, results and school news, all a click from the water's edge in Bagamoyo.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="apply.html">Apply for admission</a>
+          <button class="btn btn-ghost-light" onclick="goToLogin()">Student &amp; parent portal</button>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a dhow sailboat on the ocean at sunset">
+          <circle cx="355" cy="95" r="72" fill="#E0A526" opacity="0.9"/>
+          <path d="M0 300 Q60 282 120 300 T240 300 T360 300 T480 300 V420 H0 Z" fill="#14584D" opacity="0.9"/>
+          <path d="M0 332 Q60 315 120 332 T240 332 T360 332 T480 332 V420 H0 Z" fill="#1F7A6C" opacity="0.55"/>
+          <path d="M150 300 Q230 322 320 300 L300 313 Q230 328 170 313 Z" fill="#F7F1E3"/>
+          <line x1="235" y1="300" x2="235" y2="148" stroke="#F7F1E3" stroke-width="3"/>
+          <path d="M235 153 L235 296 L150 296 Z" fill="#C1396B"/>
+          <path d="M235 168 L235 296 L300 296 Z" fill="#12283A" opacity="0.45"/>
+        </svg>
+      </div>
+    </div>
+    <div class="kanga-trim"></div>
+  </header>
 
-  <!-- Public Info Boxes -->
-  <section class="info-section">
-    <div class="info-box">
-      <h3>📚 Student Access</h3>
-      <p>View your academic calendar, results, assignments, and stay updated with school news directly from your dashboard.</p>
-    </div>
-    <div class="info-box">
-      <h3>👨‍👩‍👧 Parent Information</h3>
-      <p>Monitor your child’s progress, track attendance, receive notifications, and communicate with teachers easily.</p>
-    </div>
-    <div class="info-box">
-      <h3>📰 School News</h3>
-      <p>Read the latest updates, school events, achievements, and announcements from the Marian School community.</p>
-    </div>
-  </section>
+  <main>
+    <section class="section" aria-labelledby="access-heading">
+      <div class="section-head">
+        <p class="eyebrow">What's inside</p>
+        <h2 id="access-heading">Everything the school day runs on</h2>
+        <p>One portal for the people who make Marian Schools work — students, parents and the front office.</p>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <div class="icon">📚</div>
+          <h3>Student access</h3>
+          <p>View your academic calendar, results and assignments, and stay ahead of the term from one dashboard.</p>
+        </div>
+        <div class="card">
+          <div class="icon">👨‍👩‍👧</div>
+          <h3>Parent information</h3>
+          <p>Follow your child's progress, track attendance, and message teachers without a trip to the office.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📰</div>
+          <h3>School news</h3>
+          <p>Read the latest updates, events and achievements from across the Marian Schools community.</p>
+        </div>
+      </div>
+    </section>
 
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-box">
-        <h3>📞 CALL US NOW</h3>
+    <section class="section on-dark" aria-labelledby="why-heading">
+      <div class="section-inner">
+        <div class="section-head">
+          <p class="eyebrow on-dark">Why Marian</p>
+          <h2 id="why-heading">A campus rooted in Bagamoyo</h2>
+          <p>Small classes, bilingual instruction, and a coastal campus that's been part of the Kerege community for years.</p>
+        </div>
+        <div class="stat-strip">
+          <div class="stat"><b>3</b><span>Academic terms a year</span></div>
+          <div class="stat"><b>2</b><span>Languages of instruction</span></div>
+          <div class="stat"><b>1</b><span>Campus, Kerege ward</span></div>
+          <div class="stat"><b>&#8734;</b><span>Open door for parents</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="brand-col">
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="20" cy="20" r="20" fill="#F7F1E3"/>
+            <path d="M20 8 L20 24 L10 24 Z" fill="#E0A526"/>
+            <path d="M8 26 Q20 30 32 26 L29 30 Q20 33 11 30 Z" fill="#12283A"/>
+          </svg>
+          Marian Schools
+        </div>
+        <p>Kerege, Bagamoyo, Pwani — academic excellence and transparent communication with students and parents.</p>
+      </div>
+      <div>
+        <h4>Call us</h4>
         <p>Office: +255 766 000 000</p>
         <p>Hotline: +255 766 000 000</p>
       </div>
-  
-      <div class="footer-box">
-        <h3>📍 COME VISIT US</h3>
-        <p>KEREGE</p>
-        <p>Bagamoyo, Pwani</p>
-        
+      <div>
+        <h4>Visit us</h4>
+        <p>Kerege<br>Bagamoyo, Pwani</p>
+        <p>Mon–Fri 8:00–17:00<br>Sat 9:00–12:00</p>
       </div>
-  
-      <div class="footer-box">
-        <h3>🕒 WORKING HOURS</h3>
-        <p>Mon–Fri: 8:00am–17:00pm</p>
-        <p>Sat: 9:00am–12:00pm</p>
-      </div>
-
-      <div class="footer-box">
-        <h3>✉️ SEND A MESSAGE</h3>
-        <p>Email: <a href="mailto:sample@email.com">sample@email.com</a></p>
-        <p>Inquiries: <a href="mailto:sample@email.com">sample@email.com</a></p>
-      </div>
-  
-      <div class="footer-box">
-        <h3>📬 NEWSLETTER</h3>
-        <h4>Subscribe to receive our newsletter</h4>
-        <input type="email" placeholder="Enter your Email">
-        <button class="subscribe-btn">Subscribe</button>
+      <div>
+        <h4>Newsletter</h4>
+        <p>Termly updates, straight to your inbox.</p>
+        <div class="newsletter-row">
+          <input type="email" placeholder="Enter your email" aria-label="Email address">
+          <button type="button" class="subscribe-btn">Subscribe</button>
+        </div>
       </div>
     </div>
-  </footer>
-  
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Marian School. All rights reserved. | Powered by Marian Tech Team
+    <div class="copyright">© 2025 Marian Schools. All rights reserved. · Built by the Marian Tech Team</div>
   </footer>
 
   <script>
     function goToLogin() {
-      window.location.href = "frontend.html"; 
+      window.location.href = "frontend.html";
     }
   </script>
 </body>

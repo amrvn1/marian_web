@@ -3,11 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Academic Calendar</title>
+  <title>Academic Calendar — Marian Schools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <h1>📅 Academic Calendar</h1>
-  <p>Term 1: Jan–March<br>Term 2: May–July<br>Term 3: Sept–Nov</p>
-  <a href="#" onclick="history.back(); return false;">🔙 Back</a>
+
+  <nav class="site-nav">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="20" fill="#12283A"/>
+        <path d="M20 8 L20 24 L10 24 Z" fill="#E0A526"/>
+        <path d="M8 26 Q20 30 32 26 L29 30 Q20 33 11 30 Z" fill="#F7F1E3"/>
+        <line x1="20" y1="8" x2="20" y2="26" stroke="#F7F1E3" stroke-width="1.2"/>
+      </svg>
+      Marian Schools
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teachers.html">Teachers</a></li>
+      <li><a href="calendar.html" aria-current="page">Calendar</a></li>
+      <li><a href="apply.html">Admissions</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="account-icon" onclick="window.location.href='frontend.html'" title="Student &amp; Parent Portal" aria-label="Go to login">👤</button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <a class="breadcrumb" href="index.html">← Back to home</a>
+      <p class="eyebrow on-dark">Academic year</p>
+      <h1>📅 Academic calendar</h1>
+      <p>Three terms a year, with a short break between each. Interview slots for new applicants are booked within Term dates below.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="term-list">
+        <div class="term">
+          <div class="term-dates">JAN&nbsp;–&nbsp;MAR</div>
+          <div>
+            <h3>Term 1</h3>
+            <p>Classes resume for the new academic year.</p>
+            <ul>
+              <li>Orientation week for new students</li>
+              <li>Mid-term assessments — late February</li>
+              <li>Term 1 break — last week of March</li>
+            </ul>
+          </div>
+        </div>
+        <div class="term">
+          <div class="term-dates">MAY&nbsp;–&nbsp;JUL</div>
+          <div>
+            <h3>Term 2</h3>
+            <p>The longest term of the year, including sports week.</p>
+            <ul>
+              <li>Inter-house sports week — early June</li>
+              <li>Mid-term assessments — mid-June</li>
+              <li>Term 2 break — last week of July</li>
+            </ul>
+          </div>
+        </div>
+        <div class="term">
+          <div class="term-dates">SEP&nbsp;–&nbsp;NOV</div>
+          <div>
+            <h3>Term 3</h3>
+            <p>Closes the academic year with final examinations.</p>
+            <ul>
+              <li>Mid-term assessments — mid-October</li>
+              <li>Final examinations — early November</li>
+              <li>Prize-giving day &amp; year close — late November</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="notice" style="margin-top:32px;">
+        <div class="icon">🗓️</div>
+        <div>
+          <h4>Booking an admissions interview?</h4>
+          <p>Interview slots open two weeks before each term begins. Sign in to the portal to see live availability and reserve a time.</p>
+        </div>
+      </div>
+      <div style="margin-top:20px;">
+        <a class="btn btn-primary" href="apply.html">Start an application</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="brand-col">
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="20" cy="20" r="20" fill="#F7F1E3"/>
+            <path d="M20 8 L20 24 L10 24 Z" fill="#E0A526"/>
+            <path d="M8 26 Q20 30 32 26 L29 30 Q20 33 11 30 Z" fill="#12283A"/>
+          </svg>
+          Marian Schools
+        </div>
+        <p>Kerege, Bagamoyo, Pwani — academic excellence and transparent communication with students and parents.</p>
+      </div>
+      <div>
+        <h4>Call us</h4>
+        <p>Office: +255 766 000 000</p>
+        <p>Hotline: +255 766 000 000</p>
+      </div>
+      <div>
+        <h4>Visit us</h4>
+        <p>Kerege<br>Bagamoyo, Pwani</p>
+        <p>Mon–Fri 8:00–17:00<br>Sat 9:00–12:00</p>
+      </div>
+      <div>
+        <h4>Admissions</h4>
+        <div class="links">
+          <a href="apply.html">Apply for admission</a>
+          <a href="calendar.html">Academic calendar</a>
+          <a href="results.html">Results portal</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2025 Marian Schools. All rights reserved. · Built by the Marian Tech Team</div>
+  </footer>
+
 </body>
 </html>

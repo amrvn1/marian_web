@@ -1,0 +1,228 @@
+@import url("tokens.css");
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background:
+    radial-gradient(120% 140% at 85% -10%, #1C3E56 0%, #12283A 55%, #0d1d29 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    #1F7A6C 0px, #1F7A6C 22px,
+    #E0A526 22px, #E0A526 34px,
+    #C1396B 34px, #C1396B 46px,
+    #12283A 46px, #12283A 58px
+  );
+}
+
+.brand-lockup {
+  position: fixed;
+  top: 28px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  color: var(--sand);
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+.brand-lockup svg { width: 30px; height: 30px; }
+
+.container {
+  background: var(--sand);
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+  padding: 44px 40px 36px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  position: relative;
+}
+
+.container h1 {
+  color: var(--ink);
+  font-size: var(--step-2);
+  margin-bottom: 6px;
+}
+
+.subhead {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin: 0 0 26px;
+}
+
+.login-form, #signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.login-form label, #signupForm label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  margin-bottom: -8px;
+}
+
+.login-form input,
+#signupForm input {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--line);
+  font-size: 16px;
+  font-family: var(--font-body);
+  background: #fff;
+  color: var(--ink);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-form input:focus,
+#signupForm input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(31, 122, 108, 0.15);
+  outline: none;
+}
+
+.login-form button[type="submit"],
+#signupForm button[type="submit"] {
+  margin-top: 6px;
+  padding: 13px;
+  background: var(--coral);
+  color: var(--sand);
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.login-form button[type="submit"]:hover,
+#signupForm button[type="submit"]:hover {
+  background: #a72e5a;
+  transform: translateY(-1px);
+}
+
+.links {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--teal-deep);
+  font-weight: 600;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--sand-2);
+  transition: background 0.2s ease;
+}
+.links a:hover { background: #e4d6b3; }
+
+footer {
+  margin-top: 26px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+/* Password field with eye toggle */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.password-wrapper input { width: 100%; padding-right: 42px; }
+.password-wrapper .eye {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}
+
+.link-text {
+  cursor: pointer;
+  text-align: center;
+  color: var(--teal-deep);
+  font-weight: 600;
+  text-decoration: underline;
+  margin-top: 4px;
+}
+
+.logout-button {
+  padding: 11px 20px;
+  background-color: var(--coral);
+  border: none;
+  color: var(--sand);
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+.logout-button:hover { background-color: #a72e5a; }
+
+/* Account icon, top right of card */
+.account-icon {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 46px;
+  height: 46px;
+  background-color: var(--ink);
+  color: var(--sand);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+.account-icon:hover, .account-icon:focus { background-color: var(--teal-deep); outline: none; }
+
+.account-menu {
+  position: absolute;
+  top: 32px;
+  right: -20px;
+  background: #fff;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  padding: 12px 18px;
+  width: 190px;
+  z-index: 20;
+  text-align: center;
+}
+
+.menu-item { margin: 8px 0; font-weight: 600; cursor: default; color: var(--ink); }
+
+.menu-item.logout-button {
+  cursor: pointer;
+  padding: 9px 12px;
+  width: 100%;
+}
+
+#welcomeMessage {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin-bottom: 18px;
+}

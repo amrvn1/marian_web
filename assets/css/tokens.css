@@ -1,0 +1,135 @@
+/* ============================================================
+   Marian Schools — Design Tokens
+   Identity: Bagamoyo coast (Pwani, Tanzania) — dhow sails on the
+   Indian Ocean, kanga-cloth trim stripes, sun-baked sand.
+   ============================================================ */
+
+:root {
+  /* Color — coastal palette, not the default cream/terracotta AI look */
+  --ink: #12283A;        /* deep ocean-at-dusk navy — base dark surface */
+  --ink-2: #1C3E56;       /* lighter navy, gradients / hover */
+  --sand: #F7F1E3;        /* sunlit sand — base light surface */
+  --sand-2: #EEE3C9;      /* deeper sand — card surfaces on light bg */
+  --teal: #1F7A6C;        /* ocean teal — primary accent / actions */
+  --teal-deep: #14584D;
+  --coral: #C1396B;       /* kanga-cloth magenta — sparing, high-signal accent */
+  --gold: #E0A526;        /* mustard — trim stripe, small highlights */
+  --ink-soft: #48697D;    /* muted navy for body copy on sand */
+  --sand-soft: #D9CBAE;   /* muted sand for body copy on ink */
+  --line: rgba(18, 40, 58, 0.12);
+  --line-on-dark: rgba(247, 241, 227, 0.16);
+
+  /* Type */
+  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-body: "Work Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Scale */
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.95rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem);
+  --step-2: clamp(1.6rem, 1.4rem + 1vw, 2rem);
+  --step-3: clamp(2.2rem, 1.8rem + 2vw, 3rem);
+  --step-4: clamp(2.8rem, 2.1rem + 3.4vw, 4.4rem);
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 12px 30px rgba(18, 40, 58, 0.14);
+  --shadow-soft: 0 6px 16px rgba(18, 40, 58, 0.08);
+
+  --kanga-stripe: repeating-linear-gradient(
+    90deg,
+    var(--teal) 0px, var(--teal) 22px,
+    var(--gold) 22px, var(--gold) 34px,
+    var(--coral) 34px, var(--coral) 46px,
+    var(--ink) 46px, var(--ink) 58px
+  );
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--sand);
+  color: var(--ink);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0 0 0.5em;
+  letter-spacing: -0.01em;
+}
+
+a { color: inherit; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal-deep);
+}
+
+.eyebrow.on-dark { color: var(--gold); }
+
+/* Kanga trim — the recurring signature stripe */
+.kanga-trim {
+  height: 6px;
+  width: 100%;
+  background: var(--kanga-stripe);
+}
+
+:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 2px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 0.85em 1.5em;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background: var(--coral);
+  color: var(--sand);
+  box-shadow: var(--shadow-soft);
+}
+.btn-primary:hover { background: #a72e5a; }
+
+.btn-ghost-light {
+  background: transparent;
+  border-color: var(--line-on-dark);
+  color: var(--sand);
+}
+.btn-ghost-light:hover { background: rgba(247, 241, 227, 0.1); }
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--ink);
+}
+.btn-ghost:hover { background: rgba(18, 40, 58, 0.05); }

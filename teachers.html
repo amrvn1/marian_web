@@ -3,11 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Meet Teachers</title>
+  <title>Meet Our Teachers — Marian Schools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <h1>👨‍🏫 Meet Our Teachers</h1>
-  <p>A section to showcase our dedicated teaching staff. This feature is part of the core React application.</p>
-  <a href="#" onclick="history.back(); return false;">🔙 Back</a>
+
+  <nav class="site-nav">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="20" cy="20" r="20" fill="#12283A"/>
+        <path d="M20 8 L20 24 L10 24 Z" fill="#E0A526"/>
+        <path d="M8 26 Q20 30 32 26 L29 30 Q20 33 11 30 Z" fill="#F7F1E3"/>
+        <line x1="20" y1="8" x2="20" y2="26" stroke="#F7F1E3" stroke-width="1.2"/>
+      </svg>
+      Marian Schools
+    </a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teachers.html" aria-current="page">Teachers</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="apply.html">Admissions</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="account-icon" onclick="window.location.href='frontend.html'" title="Student &amp; Parent Portal" aria-label="Go to login">👤</button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero-inner">
+      <a class="breadcrumb" href="index.html">← Back to home</a>
+      <p class="eyebrow on-dark">Our people</p>
+      <h1>👨‍🏫 Meet our teachers</h1>
+      <p>The staff who run each classroom and department at Marian Schools, Kerege. Full profiles will appear here once the staff directory is connected.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-head">
+        <p class="eyebrow">Departments</p>
+        <h2>A team by subject</h2>
+        <p>A sample of the departments represented on campus — this directory will list every teacher once it's live.</p>
+      </div>
+      <div class="staff-grid">
+        <div class="staff-card">
+          <div class="avatar">M</div>
+          <div class="meta">
+            <h4>Mathematics</h4>
+            <p class="role">Department</p>
+            <p class="dept">Algebra, geometry &amp; statistics, Forms 1–6.</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="avatar">S</div>
+          <div class="meta">
+            <h4>Sciences</h4>
+            <p class="role">Department</p>
+            <p class="dept">Physics, chemistry &amp; biology labs.</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="avatar">L</div>
+          <div class="meta">
+            <h4>Languages</h4>
+            <p class="role">Department</p>
+            <p class="dept">English, Kiswahili &amp; French.</p>
+          </div>
+        </div>
+        <div class="staff-card">
+          <div class="avatar">A</div>
+          <div class="meta">
+            <h4>Arts &amp; Sport</h4>
+            <p class="role">Department</p>
+            <p class="dept">Creative arts, music &amp; physical education.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="notice" style="margin-top:32px;">
+        <div class="icon">🧑‍🏫</div>
+        <div>
+          <h4>Full staff directory coming soon</h4>
+          <p>Individual teacher profiles, subjects taught and office hours will appear here once this page is connected to the school's staff records.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="brand-col">
+        <div class="brand">
+          <svg class="mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="20" cy="20" r="20" fill="#F7F1E3"/>
+            <path d="M20 8 L20 24 L10 24 Z" fill="#E0A526"/>
+            <path d="M8 26 Q20 30 32 26 L29 30 Q20 33 11 30 Z" fill="#12283A"/>
+          </svg>
+          Marian Schools
+        </div>
+        <p>Kerege, Bagamoyo, Pwani — academic excellence and transparent communication with students and parents.</p>
+      </div>
+      <div>
+        <h4>Call us</h4>
+        <p>Office: +255 766 000 000</p>
+        <p>Hotline: +255 766 000 000</p>
+      </div>
+      <div>
+        <h4>Visit us</h4>
+        <p>Kerege<br>Bagamoyo, Pwani</p>
+        <p>Mon–Fri 8:00–17:00<br>Sat 9:00–12:00</p>
+      </div>
+      <div>
+        <h4>Admissions</h4>
+        <div class="links">
+          <a href="apply.html">Apply for admission</a>
+          <a href="calendar.html">Academic calendar</a>
+          <a href="results.html">Results portal</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">© 2025 Marian Schools. All rights reserved. · Built by the Marian Tech Team</div>
+  </footer>
+
 </body>
 </html>
