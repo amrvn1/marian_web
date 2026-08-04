@@ -56,7 +56,7 @@ def create_app():
     
     @app.route('/')
     def index():
-        return {'message': 'School Interview Payment Platform API', 'status': 'running'}
+        return {'message': 'LvlUp API', 'status': 'running'}
     
     @app.route('/api/health')
     def health():

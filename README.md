@@ -1,4 +1,4 @@
-# School Interview Payment Platform
+# LvlUp
 
 A bilingual (English/Swahili) web platform for Tanzanian schools that allows parents and students to discover schools, book interviews, and pay using mobile money (Selcom, Azampesa). Schools can manage interview schedules, view paid applicants, and receive payouts automatically.
 
@@ -124,7 +124,7 @@ yarn start
 ## 📁 Project Structure
 
 ```
-MARIAN WEB/
+LVLUP/
 ├── backend/
 │   ├── models/
 │   │   ├── __init__.py
@@ -267,7 +267,7 @@ The platform supports English and Swahili:
 
 ## 📝 License
 
-This project is proprietary software for Marian School Platform.
+This project is proprietary software for LvlUp.
 
 ## 👥 Support
 

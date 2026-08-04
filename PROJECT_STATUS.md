@@ -1,4 +1,4 @@
-# Project Status - School Interview Payment Platform
+# Project Status - LvlUp
 
 ## ✅ COMPLETED (Ready to Use)
 

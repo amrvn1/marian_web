@@ -163,7 +163,7 @@ def generate_confirmation_pdf(applicant):
         <para alignment="center">
         <b>Platform Contact:</b> {support_email} | {support_phone}<br/>
         Generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}<br/>
-        © {datetime.now().year} School Interview Payment Platform. All rights reserved.
+        © {datetime.now().year} LvlUp. All rights reserved.
         </para>
         """
         footer = Paragraph(footer_text, styles['Normal'])

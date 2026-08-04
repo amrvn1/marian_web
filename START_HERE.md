@@ -1,4 +1,4 @@
-# 🎉 START HERE - School Interview Payment Platform
+# 🎉 START HERE - LvlUp
 
 ## 📦 What You Have Now
 
