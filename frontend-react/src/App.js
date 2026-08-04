@@ -7,7 +7,7 @@ import store from './store/store';
 import './i18n/i18n';
 
 // Components
-import Navbar from './components/Navbar';
+import Navbar from './shared/ui/Navbar';
 import Homepage from './pages/Homepage';
 import SearchResults from './pages/SearchResults';
 import SchoolProfile from './pages/SchoolProfile';
