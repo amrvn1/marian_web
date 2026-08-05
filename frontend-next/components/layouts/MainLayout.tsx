@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import { Container } from 'next/dist/client/components';
 import { motion } from 'framer-motion';
 import Navbar from '../ui/Navbar';
 
@@ -19,7 +18,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
         transition={{ duration: 0.45 }}
         className="min-h-screen px-4 py-8"
       >
-        <Container className="max-w-6xl mx-auto">{children}</Container>
+        <div className="max-w-6xl mx-auto">{children}</div>
       </motion.main>
     </div>
   );
