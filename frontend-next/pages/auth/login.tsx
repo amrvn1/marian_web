@@ -1,10 +1,6 @@
 import React from 'react';
 import MainLayout from '../../components/layouts/MainLayout';
 import GlassCard from '../../components/ui/GlassCard';
-
-import React from 'react';
-import MainLayout from '../../components/layouts/MainLayout';
-import GlassCard from '../../components/ui/GlassCard';
 import FormInput from '../../components/ui/FormInput';
 import Button from '../../components/ui/Button';
 import { useForm } from 'react-hook-form';
