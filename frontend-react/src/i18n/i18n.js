@@ -14,7 +14,7 @@ const resources = {
       "dashboard": "Dashboard",
       
       // Homepage
-      "welcome": "Welcome to School Interview Platform",
+      "welcome": "Welcome to LvlUp",
       "tagline": "Find your perfect school and book interviews easily",
       "search_placeholder": "Search schools by name or location",
       "search_button": "Search Schools",

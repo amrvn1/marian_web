@@ -48,7 +48,7 @@ const Navbar = () => {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component={Link} to="/" sx={{ flexGrow: 1, textDecoration: 'none', color: 'white' }}>
-          School Interview Platform
+          LvlUp
         </Typography>
 
         <Button color="inherit" component={Link} to="/">

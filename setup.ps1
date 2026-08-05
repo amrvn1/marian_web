@@ -1,8 +1,8 @@
-# School Interview Platform Setup Script
+# LvlUp Setup Script
 # Run this from PowerShell as Administrator
 
 Write-Host "================================" -ForegroundColor Cyan
-Write-Host "School Interview Platform Setup" -ForegroundColor Cyan
+Write-Host "LvlUp Setup" -ForegroundColor Cyan
 Write-Host "================================" -ForegroundColor Cyan
 Write-Host ""
 

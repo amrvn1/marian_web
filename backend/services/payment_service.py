@@ -1,6 +1,7 @@
 import requests
 import hashlib
 import json
+import os
 from datetime import datetime
 
 class SelcomPaymentService:
@@ -9,7 +10,8 @@ class SelcomPaymentService:
     def __init__(self, api_key, api_secret):
         self.api_key = api_key
         self.api_secret = api_secret
-        self.base_url = "https://apigw.selcommobile.com/v1"
+        self.base_url = os.getenv('SELCOM_BASE_URL', 'https://apigw.selcommobile.com/v1')
+        self.platform_url = os.getenv('PLATFORM_URL', 'https://your-domain.com')
     
     def create_payment(self, amount, phone_number, reference, description):
         """
@@ -35,15 +37,15 @@ class SelcomPaymentService:
             payment_data = {
                 "vendor": self.api_key,
                 "order_id": reference,
-                "buyer_email": "customer@example.com",  # Optional
-                "buyer_name": "Customer",  # Optional
+                "buyer_email": os.getenv("DEFAULT_BUYER_EMAIL", "customer@example.com"),  # Optional; override via env
+                "buyer_name": os.getenv("DEFAULT_BUYER_NAME", "Customer"),  # Optional
                 "buyer_phone": phone_number,
                 "amount": int(amount),
                 "currency": "TZS",
                 "payment_methods": ["MASTERCARD", "VISA", "TIGOPESA", "MPESA", "AIRTEL", "HALOPESA"],
-                "redirect_url": f"https://your-domain.com/payment/callback",
-                "cancel_url": f"https://your-domain.com/payment/cancel",
-                "webhook_url": f"https://your-domain.com/api/payments/webhook/selcom"
+                "redirect_url": f"{self.platform_url}/payment/callback",
+                "cancel_url": f"{self.platform_url}/payment/cancel",
+                "webhook_url": f"{self.platform_url}/api/payments/webhook/selcom"
             }
             
             # Generate signature (implement actual Selcom signature logic)
@@ -98,7 +100,8 @@ class AzampesaPaymentService:
     def __init__(self, api_key, api_secret):
         self.api_key = api_key
         self.api_secret = api_secret
-        self.base_url = "https://api.azampesa.com/v1"
+        self.base_url = os.getenv('AZAMPESA_BASE_URL', 'https://api.azampesa.com/v1')
+        self.platform_url = os.getenv('PLATFORM_URL', 'https://your-domain.com')
     
     def create_payment(self, amount, phone_number, reference, description):
         """
@@ -125,7 +128,7 @@ class AzampesaPaymentService:
                 "phone_number": phone_number,
                 "reference": reference,
                 "description": description,
-                "callback_url": f"https://your-domain.com/api/payments/webhook/azampesa"
+                "callback_url": f"{self.platform_url}/api/payments/webhook/azampesa"
             }
             
             # Generate auth token

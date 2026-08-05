@@ -157,11 +157,13 @@ def generate_confirmation_pdf(applicant):
         story.append(Spacer(1, 0.3*inch))
         
         # Footer
+        support_email = os.getenv('SUPPORT_EMAIL', 'support@schoolinterviews.tz')
+        support_phone = os.getenv('SUPPORT_PHONE', '+255 XXX XXX XXX')
         footer_text = f"""
         <para alignment="center">
-        <b>Platform Contact:</b> support@schoolinterviews.tz | +255 XXX XXX XXX<br/>
+        <b>Platform Contact:</b> {support_email} | {support_phone}<br/>
         Generated on {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}<br/>
-        © 2025 School Interview Payment Platform. All rights reserved.
+        © {datetime.now().year} LvlUp. All rights reserved.
         </para>
         """
         footer = Paragraph(footer_text, styles['Normal'])

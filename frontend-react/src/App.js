@@ -6,19 +6,19 @@ import CssBaseline from '@mui/material/CssBaseline';
 import store from './store/store';
 import './i18n/i18n';
 
-// Components
-import Navbar from './components/Navbar';
-import Homepage from './pages/Homepage';
-import SearchResults from './pages/SearchResults';
-import SchoolProfile from './pages/SchoolProfile';
-import BookingForm from './pages/BookingForm';
-import PaymentPage from './pages/PaymentPage';
-import ConfirmationPage from './pages/ConfirmationPage';
-import LoginPage from './pages/LoginPage';
-import SignupPage from './pages/SignupPage';
-import SchoolDashboard from './pages/SchoolDashboard';
-import ApplicantsView from './pages/ApplicantsView';
-import EditSchoolProfile from './pages/EditSchoolProfile';
+// Components & Layout
+import MainLayout from './layouts/MainLayout';
+import Homepage from './features/home/Homepage';
+import SearchResults from './features/schools/SearchResults';
+import SchoolProfile from './features/schools/SchoolProfile';
+import BookingForm from './features/bookings/BookingForm';
+import PaymentPage from './features/payments/PaymentPage';
+import ConfirmationPage from './features/bookings/ConfirmationPage';
+import LoginPage from './features/auth/LoginPage';
+import SignupPage from './features/auth/SignupPage';
+import SchoolDashboard from './features/admin/SchoolDashboard';
+import ApplicantsView from './features/admin/ApplicantsView';
+import EditSchoolProfile from './features/admin/EditSchoolProfile';
 
 // Theme
 const theme = createTheme({
@@ -57,8 +57,8 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router basename={process.env.PUBLIC_URL}>
-          <Navbar />
-          <Routes>
+          <MainLayout>
+            <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Homepage />} />
             <Route path="/search" element={<SearchResults />} />
@@ -96,8 +96,9 @@ function App() {
             />
 
             {/* 404 */}
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </MainLayout>
         </Router>
       </ThemeProvider>
     </Provider>
